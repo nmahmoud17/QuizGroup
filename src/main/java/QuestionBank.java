@@ -4,8 +4,12 @@ import java.util.Scanner;
 
 public class QuestionBank {
 
-    private List<QuizQuestion> questionsArray = new ArrayList<>();
+    private ArrayList<QuizQuestion> questionsArray = new ArrayList<>();
 
+
+    public QuestionBank() {
+        addQuestionAndAnswer();
+    }
 
     public void addQuestionAndAnswer() {
 
@@ -22,10 +26,12 @@ public class QuestionBank {
 
     }
 
+    public ArrayList<QuizQuestion> getQuestionsArray() {
+        return questionsArray;
+    }
 
-
-
-
-
+    public void setQuestionsArray(ArrayList<QuizQuestion> questionsArray) {
+        this.questionsArray = questionsArray;
+    }
 }
 
