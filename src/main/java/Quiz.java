@@ -25,7 +25,8 @@ public class Quiz {
         } else {
             System.out.println("Sorry, wrong answer!");
             scoreKeeper.decreaseScore();
-            System.out.println("Score: " + scoreKeeper.getScore());
+            System.out.println("You are a " + scoreKeeper.makeInsult());
+            System.out.println("Score: " + scoreKeeper.getScore() +"\n");
         }
 
     }
@@ -39,7 +40,7 @@ public class Quiz {
 
         for (int i = 0; i < 5; i++) {
             quizQuestion = retrieveQuestionAndAnswerAndRemoveFromBank();
-            quizQuestion.printQuestion();
+            System.out.print("Question: "); quizQuestion.printQuestion();
             System.out.println("\nEnter your answer: ");
             String userAnswer = myScanner.nextLine();
             checkAnswer(quizQuestion, userAnswer);
