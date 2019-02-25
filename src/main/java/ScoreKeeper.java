@@ -18,14 +18,14 @@ public class ScoreKeeper {
         insult2.add("banana!");
         insult2.add("human!");
         insult2.add("cookie!");
-        insult2.add("clown");
+        insult2.add("clown!");
 
     }
 
     public String makeInsult(){
         Collections.shuffle(insult1);
-        Collections.shuffle(insult2);
         String word1 = insult1.get(0);
+        Collections.shuffle(insult2);
         String word2 = insult2.get(0);
 
         return word1 + " "+ word2;
