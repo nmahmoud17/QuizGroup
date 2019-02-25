@@ -12,9 +12,13 @@ public class ScoreKeeper {
         insult1.add("Dumb");
         insult1.add("Goofy");
         insult1.add("Weird");
-        insult2.add("banana");
-        insult2.add("human");
-        insult2.add("cookie");
+        insult1.add("Rusty");
+        insult1.add("Chunky");
+        insult2.add("monkey!");
+        insult2.add("banana!");
+        insult2.add("human!");
+        insult2.add("cookie!");
+        insult2.add("clown");
 
     }
 
