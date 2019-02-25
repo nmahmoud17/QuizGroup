@@ -1,13 +1,14 @@
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
+import java.util.Scanner;
+
 
 public class Quiz {
 
 
     private QuestionBank questionsList = new QuestionBank();
-    private ScoreKeeper scoreKeeper;
+    private ScoreKeeper scoreKeeper = new ScoreKeeper();
     private QuizQuestion quizQuestion;
+    private Scanner myScanner = new Scanner(System.in);
 
 
     public QuizQuestion retrieveQuestionAndAnswerAndRemoveFromBank() {
@@ -17,8 +18,8 @@ public class Quiz {
         return question;
     }
 
-    public void checkAnswer (String userAnswer){
-        if (userAnswer.equalsIgnoreCase()){
+    public void checkAnswer(QuizQuestion answer, String userAnswer) {
+        if (userAnswer.equalsIgnoreCase(answer.getAnswer())) {
             scoreKeeper.increaseScore();
             System.out.println("Woo, right on! Your score is now: " + scoreKeeper.getScore());
         } else {
@@ -26,6 +27,25 @@ public class Quiz {
             scoreKeeper.decreaseScore();
             System.out.println("Score: " + scoreKeeper.getScore());
         }
+
+    }
+
+    public void startQuiz() {
+
+        System.out.println("Welcome to the quiz game, what is your name?");
+        String name = myScanner.nextLine();
+
+        System.out.println("Hello, " + name);
+
+        for (int i = 0; i < 5; i++) {
+            quizQuestion = retrieveQuestionAndAnswerAndRemoveFromBank();
+            quizQuestion.printQuestion();
+            System.out.println("\nEnter your answer: ");
+            String userAnswer = myScanner.nextLine();
+            checkAnswer(quizQuestion, userAnswer);
+
+        }
+
 
     }
 

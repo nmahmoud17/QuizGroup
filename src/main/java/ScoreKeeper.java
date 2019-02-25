@@ -5,6 +5,7 @@ public class ScoreKeeper {
 
     public void increaseScore(){
         score +=1;
+
     }
 
     public void decreaseScore(){
