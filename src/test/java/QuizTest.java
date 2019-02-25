@@ -1,9 +1,7 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static org.junit.Assert.*;
@@ -24,7 +22,7 @@ public class QuizTest {
         ArrayList<QuizQuestion> result = testQuiz.getQuestionsList().getQuestionsArray();
         assertThat(result.size(), equalTo(10));
 
-        testQuiz.generateQuestion();
+        testQuiz.retrieveQuestionAndAnswerAndRemoveFromBank();
         assertThat(result.size(), equalTo(9));
 
     }

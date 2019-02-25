@@ -22,7 +22,12 @@ public class QuestionBank {
         questionsArray.add(new QuizQuestion("Q7", "A7"));
         questionsArray.add(new QuizQuestion("Q8", "A8"));
         questionsArray.add(new QuizQuestion("Q9", "A9"));
-        questionsArray.add(new QuizQuestion("Q10", "A10"));
+        questionsArray.add(new QuizQuestion("Q10","A10"));
+        questionsArray.add(new QuizQuestion("Q11","A11"));
+        questionsArray.add(new QuizQuestion("Q12","A12"));
+        questionsArray.add(new QuizQuestion("Q13","A13"));
+        questionsArray.add(new QuizQuestion("Q14","A14"));
+        questionsArray.add(new QuizQuestion("Q15","A15"));
 
     }
 

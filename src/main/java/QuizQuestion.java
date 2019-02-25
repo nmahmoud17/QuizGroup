@@ -3,6 +3,9 @@ public class QuizQuestion {
     private String question;
     private String answer;
 
+    public QuizQuestion(){
+    }
+
     public QuizQuestion(String question, String answer){
         this.question = question;
         this.answer = answer;
@@ -26,8 +29,11 @@ public class QuizQuestion {
         this.answer = answer;
     }
 
-    public void printQuestionDetails() {
+    public void printQuestion() {
         System.out.println(question);
+    }
+
+    public void printAnswer(){
         System.out.println(answer);
     }
 
